@@ -9,11 +9,13 @@ h1{
     color: #fff;
     height: 5rem;
     line-height: 5rem;
+    font-size: 3vw; /* Scales based on viewport width */
 }
 
+/* Choices and images */
 .choice{
-    height: 200px;
-    width: 200px;
+    height: 20vw; /* Responsive width based on viewport */
+    width: 20vw;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -26,8 +28,8 @@ h1{
 }
 
 img{
-    height: 180px;
-    width: 180px;
+    height: 18vw;
+    width: 18vw;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -40,6 +42,7 @@ img{
     margin-top: 5rem;
 }
 
+/* Scoreboard */
 .score-board{
     display: flex;
     justify-content: center;
@@ -53,6 +56,7 @@ img{
     font-size: 5rem;
 }
 
+/* Message container */
 .msg-container{
     margin-top: 5rem;
 }
@@ -66,3 +70,74 @@ img{
     border-radius: 1rem;
 }
 
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw; /* Adjusted font size for smaller screens */
+    }
+    
+    .choices {
+        flex-direction: column; /* Stack choices vertically on mobile */
+        margin-top: 2rem;
+        gap: 1.5rem;
+    }
+
+    .choice {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    img {
+        height: 23vw;
+        width: 23vw;
+    }
+
+    .score-board {
+        flex-direction: column;
+        gap: 2rem; /* Reduced gap between scores */
+        font-size: 1.5rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 4rem;
+    }
+
+    .msg-container {
+        margin-top: 2rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    .choices {
+        margin-top: 3rem;
+        gap: 2rem;
+    }
+
+    .choice {
+        height: 22vw;
+        width: 22vw;
+    }
+
+    img {
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .score-board {
+        gap: 5rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 4.5rem;
+    }
+}

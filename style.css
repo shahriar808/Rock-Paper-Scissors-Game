@@ -63,7 +63,7 @@ img{
     background-color: #081b31;
     color: #fff;
     font-size: 2rem;
-    display: inline;
+    display: inline-block;
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -105,7 +105,10 @@ img{
 
     #msg {
         font-size: 1.5rem;
-        padding: 0.5rem;
+        padding: .5rem;
+        width: 90%; 
+        line-height: 1.5; 
+        word-wrap: break-word;  
     }
 }
 
